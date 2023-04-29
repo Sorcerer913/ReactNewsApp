@@ -1,5 +1,5 @@
 # Description
-It's simple react news app
+It's simple react news app.
 
 ## Dependencies
 
