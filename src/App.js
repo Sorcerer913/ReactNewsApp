@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css"
+import {Redirect, Route} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
+import {MainPage} from './pages/MainPage'
+import {PostPage} from "./pages/NewsViewPage";
+import {NavigationComponent} from "./modules/Navigation";
 
 function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <div className="App">
+            <Route>
+                <NavigationComponent/>
+            </Route>
+
+            <div className="container">
+                <Route path="/">
+                    <Redirect to="/1" />
+                </Route>
+                <Route exact={true} path={'/:pageNum'} children={<MainPage/>}/>
+                <Route exact={true} path={'/post/:postNum'} children={<PostPage/>}/>
+            </div>
+
+        </div>
+    </Router>
   );
 }
+
 
 export default App;

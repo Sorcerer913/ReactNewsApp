@@ -1,0 +1,15 @@
+.Comment {
+    text-align: left;
+    display: flex;
+    /*flex-direction: row;*/
+    /*justify-content: start;*/
+}
+
+.AuthorName {
+    font-style: italic;
+    width: 200px;
+}
+
+.CommentText {
+
+}
