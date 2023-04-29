@@ -8,3 +8,8 @@ It's simple react news app
 - [Redux](https://redux.js.org)
 - [Redux Saga](https://redux-saga.js.org)
 - [React Bootstrap](https://react-bootstrap.github.io)
+
+
+## :warning: Honorable mention
+
+Don't blame. Here can be some redundant code. Project is in develop.
